@@ -8,7 +8,7 @@ for an account to receive a token.
 To run the client, create a file called `.env` with a single environment variable `CREDERA_AUTH_TOKEN`
 containing the value of your Credera Cup token.
 
-The client takes only one parameter: the url of the game server. In this case, this should always be play.crederacup.com
+The only required parameter is the URL for the websocket to connect to.
 
-    node index.js play.crederacup.com
+    node index.js play.crederacup.com/begin/race/1
 

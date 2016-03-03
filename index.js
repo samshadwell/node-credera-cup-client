@@ -18,7 +18,7 @@ if (!TOKEN) {
     process.exit(1);
 }
 
-var ws = new WebSocket('wss://' + HOST + '/begin/race/1', null, {
+var ws = new WebSocket('wss://' + HOST, null, {
     headers: {
         'X-Credera-Auth-Token': process.env['CREDERA_AUTH_TOKEN']
     }
