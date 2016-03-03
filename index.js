@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 require('dotenv').config();
 
 var WebSocket = require('ws');
@@ -18,12 +16,6 @@ if (!TOKEN) {
     process.exit(1);
 }
 
-var ws = new WebSocket('wss://' + HOST, null, {
-    headers: {
-        'X-Credera-Auth-Token': process.env['CREDERA_AUTH_TOKEN']
-    }
-});
-
 function getStatus(code) {
     if (code === 1000) {
         return 'Finished';
@@ -37,6 +29,12 @@ function getStatus(code) {
         return 'Unknown status code';
     }
 }
+
+var ws = new WebSocket('wss://' + HOST, null, {
+    headers: {
+        'X-Credera-Auth-Token': process.env['CREDERA_AUTH_TOKEN']
+    }
+});
 
 ws.on('open', function() {
     console.log('Connection established.');
