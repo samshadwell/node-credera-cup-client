@@ -1,4 +1,4 @@
-# Credera Cup Example Node client
+# Credera Cup Example Node Client
 
 An example client for the [Credera Cup](http://www.crederacup.com) written in Node.
 
