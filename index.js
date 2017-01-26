@@ -44,6 +44,10 @@ ws.on('close', function() {
     console.log('Connection closed.');
 });
 
+ws.on('error', function(msg) {
+    console.log(msg)
+});
+
 ws.on('message', function(res) {
     var data = JSON.parse(res);
     if (data.lapResult) {
