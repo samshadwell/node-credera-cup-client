@@ -62,7 +62,7 @@ ws.on('message', function(res) {
         ws.send(JSON.stringify({ instruction: makePitStop ? 'pit' : 'continue' }));
     } else if (data.raceResult) {
         console.log('Race complete!');
-        console.log('Level: ' + data.raceResult.level);
+        console.log('Level: ' + data.raceResult.circuit);
         console.log('Status: ' + getStatus(data.raceResult.status));
         console.log('Total time: ' + data.raceResult.totalTime);
         ws.close();
