@@ -38,6 +38,7 @@ var ws = new WebSocket('wss://' + HOST, null, {
 
 ws.on('open', function() {
     console.log('Connection established.');
+    ws.send(JSON.stringify({instruction: 'beginrace'}))
 });
 
 ws.on('close', function() {
